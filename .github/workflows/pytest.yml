@@ -52,22 +52,3 @@ jobs:
           serial_log.txt
           coverage*
         if-no-files-found: error
-    - name: Checkout gcov pages
-      uses: actions/checkout@v4
-      with:
-        repository: darthcloud/BlueRetroCoverage
-        path: ./brcov
-        token: ${{ secrets.GCOV_PAGES_PAT }}
-    - name: Upload report to GitHub Pages
-      if: ${{ (github.repository == 'darthcloud/BlueRetro') }}
-      shell: bash
-      run : |
-        git config --global user.name "GitHubAction"
-        git config --global user.email "octocat@github.com"
-        cd brcov
-        git rm coverage*
-        cp ../coverage* ./
-        cp coverage.html index.html
-        git add -A
-        git commit -m "Update coverage report"
-        git push
