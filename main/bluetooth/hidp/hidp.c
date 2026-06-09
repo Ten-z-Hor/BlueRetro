@@ -1,4 +1,4 @@
-/*
+Controller/*
  * Copyright (c) 2019-2025, Jacques Gagnon
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -54,7 +54,7 @@ static const struct bt_name_type bt_name_type[] = {
     {"BlueN64 Gamepad", BT_HID_GENERIC, BT_SUBTYPE_DEFAULT, BIT(BT_QUIRK_BLUEN64_N64)},
     {"Hyperkin Pad", BT_SW, BT_SW_HYPERKIN_ADMIRAL, 0},
     {"OUYA Game Controller", BT_HID_GENERIC, BT_SUBTYPE_DEFAULT, BIT(BT_QUIRK_OUYA)},
-    {"DeviceName", BT_SW2, BT_SUBTYPE_DEFAULT, 0},
+    {"Steam", BT_SW2, BT_SUBTYPE_DEFAULT, 0},
 #endif
 };
 
